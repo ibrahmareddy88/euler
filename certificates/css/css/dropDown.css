@@ -1,0 +1,88 @@
+@charset "utf-8"
+
+
+#navMenu
+{
+margin:0;
+padding:0;
+}
+
+#navMenu ul
+{
+margin:0;
+padding:0;
+line-height:30px;
+}
+
+
+#navMenu li 
+{
+margin:0;
+padding:0;
+list-style:none;
+float:left;
+position:relative;
+background:#999;
+}
+
+
+#navMenu ul li a {
+text-align:center;
+fon-family:"Comic sans MS" ,
+text-decoration:none;
+height:30px;
+width:150px;
+display:block; 
+color:#999;
+border:1px solid #000;
+text-shadow:1px 1px #000; 
+}
+
+#navMenu ul ul {
+position:absolute;
+visibility:hidden;
+top:32px;
+
+
+}
+
+
+#navMenu ul li:hover ul  {
+visibility:visible;
+
+
+}
+
+
+
+
+/********************************************************************/
+
+
+
+
+
+
+
+
+
+
+#navMenu li:hover   {
+background:#09F;
+
+}
+
+# navMenu ul li:hover ul li a:hover   {
+background:#CCC;
+color:#000;
+}
+
+#navMenu a:hover   {
+color:#000;
+
+}
+.clearFloat   {
+clear:both:0;
+padding:0;
+
+}
