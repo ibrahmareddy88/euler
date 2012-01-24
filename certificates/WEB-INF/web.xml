@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.4" >
+<servlet>
+<servlet-name>regInsert</servlet-name>
+<servlet-class>RegInsert</servlet-class>
+</servlet>
+
+<servlet>
+<servlet-name>regdescInsert</servlet-name>
+<servlet-class>ReqdescInsert</servlet-class>
+</servlet>
+
+<servlet>
+<servlet-name>modifyreg2</servlet-name>
+<servlet-class>RegInsertModify</servlet-class>
+</servlet>
+
+<servlet>
+<servlet-name>relationsmodify</servlet-name>
+<servlet-class>RelationssModify</servlet-class>
+</servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>Enqreg</servlet-name>
+    <servlet-class>Enqreg</servlet-class>
+  </servlet>
+
+
+
+
+<servlet-mapping>
+<servlet-name>regInsert</servlet-name>
+<url-pattern>/regInsert</url-pattern>
+</servlet-mapping>
+
+<servlet-mapping>
+<servlet-name>regdescInsert</servlet-name>
+<url-pattern>/regdescInsert</url-pattern>
+</servlet-mapping>
+
+<servlet-mapping>
+<servlet-name>modifyreg2</servlet-name>
+<url-pattern>/modifyreg2</url-pattern>
+</servlet-mapping>
+
+<servlet-mapping>
+<servlet-name>relationsmodify</servlet-name>
+<url-pattern>/relations</url-pattern>
+</servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Enqreg</servlet-name>
+    <url-pattern>/enqregInsert</url-pattern>
+  </servlet-mapping>
+
+
+<welcome-file-list>
+	<welcome-file>home.htm</welcome-file>
+</welcome-file-list>
+</web-app>

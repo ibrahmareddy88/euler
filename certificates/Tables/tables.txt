@@ -1,0 +1,50 @@
+
+
+create user smartcard identified by smartcard;
+
+ 
+
+grant connect, resource to smartcard;
+
+
+ connect smartcard/smartcard;
+
+
+
+
+create table admin(username varchar2(20) not null,password varchar2(20));
+
+
+CREATE TABLE  branchhead( NAME   VARCHAR2(20)  NOT NULL,
+ USERNAME   VARCHAR2(20) NOT NULL, PASSWORD  VARCHAR2(20) NOT NULL, PHONE  NUMBER(20), 
+ JDATE   DATE,  MOBILE   varchar2(20),  EMAIL  VARCHAR2(25),  ADDRESS   VARCHAR2(25),
+ BRANCH   VARCHAR2(20)  primary key,  CITY   VARCHAR2(30),  PIN  NUMBER(6),
+ STATE  VARCHAR2(20),  BNO   NUMBER(10)NOT NULL );
+
+create table card (cno number(5) primary key,cname varchar2(20),capacity number(5),
+validity  varchar2(20),discount number(6),amount number(6));
+
+
+
+create table enquiry(name varchar2(20),age number,sex varchar2(25),district varchar2(20),
+designation varchar2(20),qualification varchar2(20),state varchar2(20),address varchar2(20),
+phone number(20),nsize number(5),branch varchar2(20),bdate date);
+
+  create table reg(cno number(5) references card(cno),cname varchar2(20),
+  capacity number(4),validity varchar2(20),discount number(4),amount number(5),
+  regno number(5) primary key,hname varchar2(20),designation varchar2(20),
+  sex varchar2(10),phone number(10),BRANCH varchar2(20) REFERENCES BRANCHHEAD(BRANCH),
+   qualification varchar2(20),address varchar2(20),pin number(25),state varchar2(20),
+jdate  date,
+district varchar2(20));
+
+create table regdesc(regno number references reg(regno),
+name1 varchar2(20),sex1 varchar2(20),age1 number,relation varchar2(20));
+
+------------------------------------------------------------------
+
+insert into admin  values('smartcard','smartcard');
+commit;
+insert into card values(100,'soubhagya',4,'3years',35,1000);
+
+commit;
