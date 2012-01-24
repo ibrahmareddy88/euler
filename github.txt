@@ -1,0 +1,261 @@
+Welcome to Git (version 1.7.8-preview20111206)
+
+
+Run 'git help git' to display the help index.
+Run 'git help <command>' to display help for specific commands.
+
+hemanth@HEMANTH-PC ~
+$ ls
+AppData
+Application Data
+Contacts
+Cookies
+Desktop
+Documents
+Downloads
+Favorites
+Links
+Local Settings
+Music
+My Documents
+NTUSER.DAT{016888bd-6c6f-11de-8d1d-001e0bcde3ec}.TM.blf
+NTUSER.DAT{016888bd-6c6f-11de-8d1d-001e0bcde3ec}.TMContainer00000000000000000001
+
+hemanth@HEMANTH-PC ~/git
+$ git config --global user.name "Brahma Reddy"
+
+hemanth@HEMANTH-PC ~/git
+$ git config --global user.email ibrahmareddy88@gmail.com
+
+hemanth@HEMANTH-PC ~/git
+$ cd ..
+
+hemanth@HEMANTH-PC ~
+$ cd ~/.ssh
+sh.exe": cd: /c/Users/hemanth/.ssh: No such file or directory
+
+hemanth@HEMANTH-PC ~
+$ ls
+AppData
+Application Data
+Contacts
+Cookies
+Desktop
+Documents
+Downloads
+Favorites
+Links
+Local Settings
+Music
+My Documents
+NTUSER.DAT{016888bd-6c6f-11de-8d1d-001e0bcde3ec}.TM.blf
+NTUSER.DAT{016888bd-6c6f-11de-8d1d-001e0bcde3ec}.TMContainer00000000000000000001
+.regtrans-ms
+NTUSER.DAT{016888bd-6c6f-11de-8d1d-001e0bcde3ec}.TMContainer00000000000000000002
+.regtrans-ms
+NetHood
+Pictures
+PrintHood
+Recent
+Saved Games
+Searches
+SendTo
+Start Menu
+Templates
+Videos
+git
+ntuser.dat
+ntuser.dat.LOG1
+ntuser.dat.LOG2
+ntuser.dat{d5920e6f-f7d0-11e0-9959-782bcbd4cd12}.TM.blf
+ntuser.dat{d5920e6f-f7d0-11e0-9959-782bcbd4cd12}.TMContainer00000000000000000001
+.regtrans-ms
+ntuser.dat{d5920e6f-f7d0-11e0-9959-782bcbd4cd12}.TMContainer00000000000000000002
+.regtrans-ms
+ntuser.ini
+
+hemanth@HEMANTH-PC ~
+$ ssh-keygen -t -rsa -C "ibrahmareddy88@gmail.com"
+unknown key type -rsa
+
+hemanth@HEMANTH-PC ~
+$ ssh-keygen -t rsa -C "ibrahmareddy88@gmail.com"
+Generating public/private rsa key pair.
+Enter file in which to save the key (/c/Users/hemanth/.ssh/id_rsa):
+Created directory '/c/Users/hemanth/.ssh'.
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /c/Users/hemanth/.ssh/id_rsa.
+Your public key has been saved in /c/Users/hemanth/.ssh/id_rsa.pub.
+The key fingerprint is:
+5f:72:b6:75:c9:5f:cb:35:6d:90:c5:eb:9a:31:13:25 ibrahmareddy88@gmail.com
+
+hemanth@HEMANTH-PC ~
+$ ls
+AppData
+Application Data
+Contacts
+Cookies
+Desktop
+Documents
+Downloads
+Favorites
+Links
+Local Settings
+Music
+My Documents
+NTUSER.DAT{016888bd-6c6f-11de-8d1d-001e0bcde3ec}.TM.blf
+NTUSER.DAT{016888bd-6c6f-11de-8d1d-001e0bcde3ec}.TMContainer00000000000000000001
+.regtrans-ms
+NTUSER.DAT{016888bd-6c6f-11de-8d1d-001e0bcde3ec}.TMContainer00000000000000000002
+.regtrans-ms
+NetHood
+Pictures
+PrintHood
+Recent
+Saved Games
+Searches
+SendTo
+Start Menu
+Templates
+Videos
+git
+ntuser.dat
+ntuser.dat.LOG1
+ntuser.dat.LOG2
+ntuser.dat{d5920e6f-f7d0-11e0-9959-782bcbd4cd12}.TM.blf
+ntuser.dat{d5920e6f-f7d0-11e0-9959-782bcbd4cd12}.TMContainer00000000000000000001
+.regtrans-ms
+ntuser.dat{d5920e6f-f7d0-11e0-9959-782bcbd4cd12}.TMContainer00000000000000000002
+.regtrans-ms
+ntuser.ini
+
+hemanth@HEMANTH-PC ~
+$ cd .
+./          ../         .BETA/      .gitconfig  .ssh/
+
+hemanth@HEMANTH-PC ~
+$ cd .ssh/
+
+hemanth@HEMANTH-PC ~/.ssh
+$ ls
+id_rsa  id_rsa.pub
+
+hemanth@HEMANTH-PC ~/.ssh
+$ notepad id_rsa.pub
+
+
+hemanth@HEMANTH-PC ~/git/euler
+$ git init
+Initialized empty Git repository in c:/Users/hemanth/git/euler/.git/
+
+hemanth@HEMANTH-PC ~/git/euler (master)
+$ touch README
+
+hemanth@HEMANTH-PC ~/git/euler (master)
+$ notepad README
+
+hemanth@HEMANTH-PC ~/git/euler (master)
+$ git add README
+
+hemanth@HEMANTH-PC ~/git/euler (master)
+$ git commit -m "my first commit"
+[master (root-commit) e02e7e9] my first commit
+ 1 files changed, 1 insertions(+), 0 deletions(-)
+ create mode 100644 README
+
+hemanth@HEMANTH-PC ~/git/euler (master)
+$ git status
+# On branch master
+nothing to commit (working directory clean)
+
+hemanth@HEMANTH-PC ~/git/euler (master)
+$ git log
+commit e02e7e9c707244407d24da5e77f1ccbe479905fa
+Author: Brahma Reddy <ibrahmareddy88@gmail.com>
+Date:   Wed Jan 11 14:37:58 2012 +0530
+
+    my first commit
+
+hemanth@HEMANTH-PC ~/git/euler (master)
+$ git remote add origin git@github.com:ibrahmareddy88/euler.git
+
+hemanth@HEMANTH-PC ~/git/euler (master)
+$ git push origin master
+Counting objects: 3, done.
+Writing objects: 100% (3/3), 232 bytes, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To git@github.com:ibrahmareddy88/euler.git
+ * [new branch]      master -> master
+
+hemanth@HEMANTH-PC ~/git/euler (master)
+$ touch .gitignore
+
+hemanth@HEMANTH-PC ~/git/euler (master)
+$ notepad .gitignore
+
+hemanth@HEMANTH-PC ~/git/euler (master)
+$ git add .gitignore
+
+hemanth@HEMANTH-PC ~/git/euler (master)
+$ git commit -m "added  gitignore"
+[master 6980b31] added  gitignore
+ 1 files changed, 5 insertions(+), 0 deletions(-)
+ create mode 100644 .gitignore
+
+hemanth@HEMANTH-PC ~/git/euler (master)
+$ git push origin master
+Counting objects: 4, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 310 bytes, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To git@github.com:ibrahmareddy88/euler.git
+   e02e7e9..6980b31  master -> master
+
+hemanth@HEMANTH-PC ~/git/euler (master)
+$ ls
+README
+
+hemanth@HEMANTH-PC ~/git/euler (master)
+$ git add I.BrahmaReddy.doc
+
+hemanth@HEMANTH-PC ~/git/euler (master)
+$ git commit -m "added my resume"
+[master 922660e] added my resume
+ 1 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 I.BrahmaReddy.doc
+
+hemanth@HEMANTH-PC ~/git/euler (master)
+$ git push origin master
+Counting objects: 4, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 11.05 KiB, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To git@github.com:ibrahmareddy88/euler.git
+   6980b31..922660e  master -> master
+
+hemanth@HEMANTH-PC ~/git/euler (master)
+$ notepad .gitignore
+
+hemanth@HEMANTH-PC ~/git/euler (master)
+$ git add .gitignore
+
+hemanth@HEMANTH-PC ~/git/euler (master)
+$ git commit -m "added comments for gitignore"
+[master 874ee70] added comments for gitignore
+ 1 files changed, 1 insertions(+), 0 deletions(-)
+
+hemanth@HEMANTH-PC ~/git/euler (master)
+$ git push origin master
+Counting objects: 5, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 397 bytes, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To git@github.com:ibrahmareddy88/euler.git
+   922660e..874ee70  master -> master
+
+hemanth@HEMANTH-PC ~/git/euler (master)
+$
